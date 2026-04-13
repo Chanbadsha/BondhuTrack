@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Ayesha Rahman",
-        "picture": "https://randomuser.me/api/portraits/women/21.jpg",
+        "picture": "https://i.ibb.co.com/cKvv1nf3/Ayesha.png",
         "email": "ayesha.rahman@gmail.com",
         "days_since_contact": 18,
         "status": "overdue",
@@ -17,7 +17,7 @@
     {
         "id": 2,
         "name": "Rahim Uddin",
-        "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+        "picture": "https://i.ibb.co.com/7dS1Zm3D/Rahim.png",
         "email": "rahim.uddin@gmail.com",
         "days_since_contact": 5,
         "status": "on-track",
@@ -32,7 +32,7 @@
     {
         "id": 3,
         "name": "Nusrat Jahan",
-        "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+        "picture": "https://i.ibb.co.com/35p3w4G7/Nusrat.png",
         "email": "nusrat.jahan@gmail.com",
         "days_since_contact": 9,
         "status": "almost due",
@@ -47,7 +47,7 @@
     {
         "id": 4,
         "name": "Tanvir Hasan",
-        "picture": "https://randomuser.me/api/portraits/men/41.jpg",
+        "picture": "https://i.ibb.co.com/ymHt5TxM/Tanvir.png",
         "email": "tanvir.hasan@gmail.com",
         "days_since_contact": 22,
         "status": "overdue",
@@ -62,7 +62,7 @@
     {
         "id": 5,
         "name": "Mim Akter",
-        "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+        "picture": "https://i.ibb.co.com/ycQRLtyt/Mim.png",
         "email": "mim.akter@gmail.com",
         "days_since_contact": 3,
         "status": "on-track",
@@ -77,7 +77,7 @@
     {
         "id": 6,
         "name": "Sabbir Hossain",
-        "picture": "https://randomuser.me/api/portraits/men/12.jpg",
+        "picture": "https://i.ibb.co.com/JWqhXpkk/Sabbir.png",
         "email": "sabbir.hossain@gmail.com",
         "days_since_contact": 14,
         "status": "almost due",
@@ -92,7 +92,7 @@
     {
         "id": 7,
         "name": "Farhana Islam",
-        "picture": "https://randomuser.me/api/portraits/women/18.jpg",
+        "picture": "https://i.ibb.co.com/FkddnSZK/Farhana.png",
         "email": "farhana.islam@gmail.com",
         "days_since_contact": 1,
         "status": "on-track",
@@ -107,7 +107,7 @@
     {
         "id": 8,
         "name": "Imran Ali",
-        "picture": "https://randomuser.me/api/portraits/men/53.jpg",
+        "picture": "https://i.ibb.co.com/1GdyQ5g5/Imran.png",
         "email": "imran.ali@gmail.com",
         "days_since_contact": 27,
         "status": "overdue",
@@ -122,7 +122,7 @@
     {
         "id": 9,
         "name": "Sadia Noor",
-        "picture": "https://randomuser.me/api/portraits/women/52.jpg",
+        "picture": "https://i.ibb.co.com/yzXBh68/Sadia.png",
         "email": "sadia.noor@gmail.com",
         "days_since_contact": 6,
         "status": "on-track",
@@ -137,7 +137,7 @@
     {
         "id": 10,
         "name": "Mahmudul Hasan",
-        "picture": "https://randomuser.me/api/portraits/men/25.jpg",
+        "picture": "https://i.ibb.co.com/SXn48rYg/Mahmudul.png",
         "email": "mahmudul.hasan@gmail.com",
         "days_since_contact": 16,
         "status": "almost due",
@@ -152,7 +152,7 @@
     {
         "id": 11,
         "name": "Tanjina Akter",
-        "picture": "https://randomuser.me/api/portraits/women/33.jpg",
+        "picture": "https://i.ibb.co.com/RGTFGFY4/Tanjina.png",
         "email": "tanjina.akter@gmail.com",
         "days_since_contact": 2,
         "status": "on-track",
@@ -167,7 +167,7 @@
     {
         "id": 12,
         "name": "Rafiq Uddin",
-        "picture": "https://randomuser.me/api/portraits/men/60.jpg",
+        "picture": "https://i.ibb.co.com/qYSHfHM1/Rafiq.png",
         "email": "rafiq.uddin@gmail.com",
         "days_since_contact": 21,
         "status": "overdue",
@@ -182,7 +182,7 @@
     {
         "id": 13,
         "name": "Meher Afroz",
-        "picture": "https://randomuser.me/api/portraits/women/41.jpg",
+        "picture": "https://i.ibb.co.com/pGHvw1T/Meher.png",
         "email": "meher.afroz@gmail.com",
         "days_since_contact": 11,
         "status": "almost due",
@@ -197,7 +197,7 @@
     {
         "id": 14,
         "name": "Shakil Ahmed",
-        "picture": "https://randomuser.me/api/portraits/men/19.jpg",
+        "picture": "https://i.ibb.co.com/BVKfkgXm/Shakil.png",
         "email": "shakil.ahmed@gmail.com",
         "days_since_contact": 4,
         "status": "on-track",
@@ -212,7 +212,7 @@
     {
         "id": 15,
         "name": "Nafisa Khan",
-        "picture": "https://randomuser.me/api/portraits/women/27.jpg",
+        "picture": "https://i.ibb.co.com/hRTJ74Vs/nafisa.png",
         "email": "nafisa.khan@gmail.com",
         "days_since_contact": 19,
         "status": "overdue",
@@ -227,7 +227,7 @@
     {
         "id": 16,
         "name": "Arif Hossain",
-        "picture": "https://randomuser.me/api/portraits/men/45.jpg",
+        "picture": "https://i.ibb.co.com/S7vhHWDW/Arif.png",
         "email": "arif.hossain@gmail.com",
         "days_since_contact": 8,
         "status": "on-track",

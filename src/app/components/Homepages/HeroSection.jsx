@@ -1,19 +1,21 @@
 const stats = [
   { value: "10", label: "Total Friends" },
-  { value: "3", label: "Overdue" },
-  { value: "5", label: "On Track" },
-  { value: "12", label: "Interactions" },
+  { value: "3", label: "On Track" },
+  { value: "5", label: "Need Attention" },
+  { value: "12", label: "Interactions This Month" },
 ];
 
 const HeroSection = () => {
+  // const { friends, setFriends } = useContext(FriendsContext);
+
   return (
-    <div className="bg-[#F8FAFC]">
-      <div className=" container mx-auto border-b pb-12 border-b-gray-300">
-        <div className="max-w-4xl mx-auto text-center  lg:pt-12 xl:pt-16">
-          <h1 className="text-5xl font-bold capitalize">
+    <div className="flex-1">
+      <div className=" container mx-auto border-b pb-12 border-b-gray-400">
+        <div className="max-w-4xl mx-auto text-center pt-6  lg:pt-12 xl:pt-16">
+          <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold capitalize">
             Track your friendships with ease
           </h1>
-          <p className="pt-6 max-w-2xl mx-auto text-[#64748B]">
+          <p className="px-6 py-2 max-w-2xl mx-auto text-[#64748B]">
             BondhuTrack combines modern tracking with emotional value, helping
             you manage friendships with data-driven insights and simple tools.
           </p>
@@ -47,12 +49,12 @@ const HeroSection = () => {
         </div>
 
         {/* Connection Overview */}
-        {/* STATS SECTION */}
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6">
+
+        <div className="mt-14 grid grid-cols-2 px-4 xl:px-12 lg:grid-cols-4 gap-6">
           {stats.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-sm hover:shadow-md transition p-6 text-center border border-gray-100"
+              className="bg-white py-8  rounded-2xl shadow-sm hover:shadow-md transition p-6 text-center border border-gray-100"
             >
               <h2 className="text-3xl font-bold text-[#0F172A]">
                 {item.value}

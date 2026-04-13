@@ -4,9 +4,9 @@ import NavLinks from "./NavLinks";
 const NavBar = () => {
   return (
     <nav className="bg-base-100 shadow-sm">
-      <div className="navbar container mx-auto">
+      <div className="navbar flex-col items-center sm:flex-row container mx-auto">
         <div className="flex-1">
-          <Link href={"/"} className=" text-xl xl:text-3xl font-semibold">
+          <Link href={"/"} className=" text-2xl xl:text-3xl font-semibold">
             <span className="font-bold">Bondhu</span>Track
           </Link>
         </div>
