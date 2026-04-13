@@ -1,7 +1,7 @@
 import Link from "next/link";
 import NavLinks from "./NavLinks";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <nav className="bg-base-100 shadow-sm">
       <div className="navbar container mx-auto">
@@ -20,4 +20,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
