@@ -1,30 +1,18 @@
-import React from "react";
+import Link from "next/link";
+import NavLinks from "./NavLinks";
 
 const NavBar = () => {
   return (
     <nav className="bg-base-100 shadow-sm">
-      <div className="navbar container mx-auto ">
+      <div className="navbar container mx-auto">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link href={"/"} className=" text-xl xl:text-3xl font-semibold">
+            <span className="font-bold">Bondhu</span>Track
+          </Link>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Link</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="bg-base-100 rounded-t-none p-2">
-                  <li>
-                    <a>Link 1</a>
-                  </li>
-                  <li>
-                    <a>Link 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
+          <ul className="menu menu-horizontal px-1 items-center">
+            <NavLinks />
           </ul>
         </div>
       </div>
