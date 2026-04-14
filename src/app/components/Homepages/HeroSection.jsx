@@ -1,12 +1,31 @@
-const stats = [
-  { value: "10", label: "Total Friends" },
-  { value: "3", label: "On Track" },
-  { value: "5", label: "Need Attention" },
-  { value: "12", label: "Interactions This Month" },
-];
+"use client";
+import GetContextData from "@/app/lib/GetContextData";
+import { useEffect, useState } from "react";
+
+// const stats = [
+//   { value: "10", label: "Total Friends" },
+//   { value: "3", label: "On Track" },
+//   { value: "5", label: "Need Attention" },
+//   { value: "12", label: "Interactions This Month" },
+// ];
 
 const HeroSection = () => {
-  // const { friends, setFriends } = useContext(FriendsContext);
+  const { friends } = GetContextData();
+
+  const onTrack = friends.filter(
+    (friend) => friend.status === "on-track",
+  ).length;
+  const needAttention = friends.filter(
+    (friend) => friend.status === "overdue",
+  ).length;
+  const Interactions = () => {
+    const int = friends.length - needAttention;
+    console.log(int);
+    return int;
+  };
+  {
+    console.log(Interactions());
+  }
 
   return (
     <div className="flex-1">
@@ -51,17 +70,29 @@ const HeroSection = () => {
         {/* Connection Overview */}
 
         <div className="mt-14 grid grid-cols-2 px-4 xl:px-12 lg:grid-cols-4 gap-6">
-          {stats.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white py-8  rounded-2xl shadow-sm hover:shadow-md transition p-6 text-center border border-gray-100"
-            >
-              <h2 className="text-3xl font-bold text-[#0F172A]">
-                {item.value}
-              </h2>
-              <p className="text-[#64748B] mt-1">{item.label}</p>
-            </div>
-          ))}
+          <div className="bg-white py-8  rounded-2xl shadow-sm hover:shadow-md transition p-6 text-center border border-gray-100">
+            <h2 className="text-3xl font-bold text-[#0F172A]">
+              {friends.length}
+            </h2>
+            <p className="text-[#64748B] mt-1">Total Friends</p>
+          </div>
+          <div className="bg-white py-8  rounded-2xl shadow-sm hover:shadow-md transition p-6 text-center border border-gray-100">
+            <h2 className="text-3xl font-bold text-[#0F172A]"> {onTrack}</h2>
+            <p className="text-[#64748B] mt-1">On Track</p>
+          </div>
+          <div className="bg-white py-8  rounded-2xl shadow-sm hover:shadow-md transition p-6 text-center border border-gray-100">
+            <h2 className="text-3xl font-bold text-[#0F172A]">
+              {" "}
+              {needAttention}
+            </h2>
+            <p className="text-[#64748B] mt-1">Need Attention</p>
+          </div>
+          <div className="bg-white py-8  rounded-2xl shadow-sm hover:shadow-md transition p-6 text-center border border-gray-100">
+            <h2 className="text-3xl font-bold text-[#0F172A]">
+              {Interactions()}
+            </h2>
+            <p className="text-[#64748B] mt-1">Interactions This Month</p>
+          </div>
         </div>
       </div>
     </div>
