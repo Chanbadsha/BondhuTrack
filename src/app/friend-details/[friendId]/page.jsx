@@ -1,3 +1,4 @@
+import CheckIn from "@/app/components/shared/CheckIn";
 import InteractionsCard from "@/app/components/shared/InteractionsCard";
 import GetFriendsData from "@/app/lib/GetFriendsData";
 import Image from "next/image";
@@ -132,26 +133,7 @@ const FriendDetailsPage = async ({ params }) => {
           </div>
 
           {/* Quick Check-In */}
-          <div className="bg-white py-8  mt-12  rounded-2xl shadow-sm hover:shadow-md transition p-6  border border-gray-100">
-            <h2 className="text-lg lg:text-xl   font-bold text-[#5d6475]">
-              Quick Check-In
-            </h2>
-
-            <div className="grid grid-cols-3 gap-2 lg:gap-6 mt-4">
-              <button className="btn flex flex-col text-base sm:text-lg lg:text-xl h-full py-3 lg:py-6">
-                <MdWifiCalling3 />
-                Call
-              </button>
-              <button className="btn flex flex-col text-base sm:text-lg lg:text-xl h-full py-3 lg:py-6">
-                <MdMessage />
-                Message
-              </button>
-              <button className="btn flex flex-col text-base sm:text-lg lg:text-xl h-full py-3 lg:py-6">
-                <FaVideo />
-                Video
-              </button>
-            </div>
-          </div>
+          <CheckIn friendInfo={friend} />
 
           {/* Recent Interactions */}
           <div className="mt-6 bg-white        ">
@@ -164,9 +146,7 @@ const FriendDetailsPage = async ({ params }) => {
                 Full History
               </button>
             </div>
-            <InteractionsCard
-              storageKey={"RecentInteractions"}
-            ></InteractionsCard>
+            <InteractionsCard personName={name}></InteractionsCard>
           </div>
         </div>
       </div>
