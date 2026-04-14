@@ -1,17 +1,51 @@
 "use client";
 import GetContextData from "@/app/lib/GetContextData";
-import { useEffect, useState } from "react";
+import SaveData from "@/app/lib/localStorage/SaveData";
+import { useEffect } from "react";
 
-// const stats = [
-//   { value: "10", label: "Total Friends" },
-//   { value: "3", label: "On Track" },
-//   { value: "5", label: "Need Attention" },
-//   { value: "12", label: "Interactions This Month" },
-// ];
+const interactions = [
+  {
+    id: 1,
+    type: "Text",
+    description: "Asked for career advice",
+    date: "Jan 28, 2026",
+    personName: "all",
+  },
+  {
+    id: 2,
+    type: "Call",
+    description: "Industry conference meetup",
+    date: "Feb 03, 2026",
+    personName: "all",
+  },
+  {
+    id: 3,
+    type: "Video",
+    description: "Discussed project collaboration",
+    date: "Feb 10, 2026",
+    personName: "all",
+  },
+  {
+    id: 4,
+    type: "Call",
+    description: "Quick catch-up call",
+    date: "Feb 18, 2026",
+    personName: "all",
+  },
+  {
+    id: 5,
+    type: "Text",
+    description: "Shared helpful resources",
+    date: "Feb 25, 2026",
+    personName: "all",
+  },
+];
 
 const HeroSection = () => {
   const { friends } = GetContextData();
-
+  useEffect(() => {
+    SaveData("RecentInteractions", interactions);
+  }, []);
   const onTrack = friends.filter(
     (friend) => friend.status === "on-track",
   ).length;

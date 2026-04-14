@@ -1,7 +1,9 @@
+import InteractionsCard from "@/app/components/shared/InteractionsCard";
 import GetFriendsData from "@/app/lib/GetFriendsData";
 import Image from "next/image";
 
 import { FaArchive, FaVideo } from "react-icons/fa";
+import { LuHistory } from "react-icons/lu";
 import {
   MdDeleteForever,
   MdMessage,
@@ -31,7 +33,7 @@ const FriendDetailsPage = async ({ params }) => {
   });
 
   return (
-    <div className="bg-base-300  px-0">
+    <div className="bg-base-300 pb-12  px-0">
       <div className="grid gap-y-12 md:gap-y-0   lg:container  sm:px-4 pt-12 mx-auto grid-cols-1 sm:grid-cols-8  w-full min-h-screen">
         {/* Friend Info Card */}
         <div className=" sm:col-span-3 xl:col-span-2 px-12  sm:px-0">
@@ -149,6 +151,22 @@ const FriendDetailsPage = async ({ params }) => {
                 Video
               </button>
             </div>
+          </div>
+
+          {/* Recent Interactions */}
+          <div className="mt-6 bg-white        ">
+            <div className="flex justify-between items-center pb-0 p-6 ">
+              <p className="font-semibold lg:text-2xl text-[#5d6475]">
+                Recent Interactions
+              </p>
+              <button className="btn">
+                <LuHistory />
+                Full History
+              </button>
+            </div>
+            <InteractionsCard
+              storageKey={"RecentInteractions"}
+            ></InteractionsCard>
           </div>
         </div>
       </div>
