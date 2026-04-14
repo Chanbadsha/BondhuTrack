@@ -20,12 +20,9 @@ const HeroSection = () => {
   ).length;
   const Interactions = () => {
     const int = friends.length - needAttention;
-    console.log(int);
+
     return int;
   };
-  {
-    console.log(Interactions());
-  }
 
   return (
     <div className="flex-1">

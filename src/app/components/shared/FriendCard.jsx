@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FriendCard = ({ friend }) => {
-  console.log(friend);
   const { id, name, picture, days_since_contact, status, tags } = friend;
   return (
     <Link
