@@ -47,7 +47,6 @@ const InteractionsCard = ({ personName }) => {
             <div className="flex justify-between  items-center mb-4">
               <div className="flex items-center gap-4">
                 <div className="text-4xl">
-                  {" "}
                   {item.type == "Video" ? (
                     <FaVideo />
                   ) : item.type == "Text" ? (

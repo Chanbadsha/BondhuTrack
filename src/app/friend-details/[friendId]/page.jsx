@@ -25,6 +25,7 @@ const FriendDetailsPage = async ({ params }) => {
     tags,
     goal,
     next_due_date,
+    email,
   } = friend;
 
   const formatted = new Date(next_due_date).toLocaleDateString("en-US", {
@@ -67,6 +68,10 @@ const FriendDetailsPage = async ({ params }) => {
                   </p>
                 ))}
               </div>
+              <p>
+                <span className="font-semibold">Email: </span>
+                {email}
+              </p>
             </div>
           </div>
           {/* Friend Info btn */}
