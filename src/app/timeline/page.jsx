@@ -61,7 +61,7 @@ const TimelinePage = () => {
         </div>
         <div className="my-4">
           {filterData.length > 0 ? (
-            filterData?.map((interaction) => (
+            filterData?.slice(0, 10).map((interaction) => (
               <div
                 key={interaction.id}
                 className="bg-white  mt-2 rounded-2xl shadow-sm hover:shadow-md transition p-6 border border-gray-100"
