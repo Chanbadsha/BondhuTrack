@@ -30,10 +30,11 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full  flex flex-col">
         <InterActionProvider>
-          {" "}
           <FriendsProvider>
-            <NavBar></NavBar>
-            <main className="flex-1 flex flex-col"> {children}</main>
+            <div className="fixed z-10 top-0 left-0 w-full">
+              <NavBar></NavBar>
+            </div>
+            <main className="flex-1 mt-17 flex flex-col"> {children}</main>
             <Footer />
           </FriendsProvider>
         </InterActionProvider>
