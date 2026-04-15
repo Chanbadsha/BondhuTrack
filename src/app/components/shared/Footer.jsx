@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer  footer-horizontal footer-center bg-[#244d3f] text-primary-content p-10">
+    <footer className="bg-[#244d3f]">
+      <div className="footer pt-20  footer-horizontal footer-center  text-primary-content p-10">
         <div className="border-b w-full container mx-auto border-b-gray-500 pb-6">
           <aside>
             <h2 className="font-bold text-2xl mb-1 lg:text-5xl">BondhuTrack</h2>
