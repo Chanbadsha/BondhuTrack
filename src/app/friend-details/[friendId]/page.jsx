@@ -23,6 +23,7 @@ const FriendDetailsPage = async ({ params }) => {
     goal,
     next_due_date,
     email,
+    bio,
   } = friend;
 
   const formatted = new Date(next_due_date).toLocaleDateString("en-US", {
@@ -55,6 +56,7 @@ const FriendDetailsPage = async ({ params }) => {
             </figure>
             <div className="card-body px-0 w-full items-center text-center">
               <h2 className="card-title  ">{name}</h2>
+              <p className=" max-w-8/12 text-center  text-xs">{`"${bio}"`}</p>
               <p>{days_since_contact}d Ago</p>
               <p
                 className={` capitalize text-white px-4 py-2 font-semibold rounded-2xl ${status == "overdue" ? "bg-red-400" : status == "almost due" ? "bg-[#EFAD44]" : "bg-green-900"}`}

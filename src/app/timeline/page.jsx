@@ -29,34 +29,59 @@ const TimelinePage = () => {
 
     toast.success(`Showing ${filterBy} interactions`);
   };
+
+  const handleSearch = (e) => {
+    const searchText = e.target.value.trim().toLowerCase();
+    console.log(searchText.length);
+    if (searchText.length > 0) {
+      const data = interactions.filter(
+        (interaction) =>
+          interaction?.personName?.toLowerCase().includes(searchText) ||
+          interaction?.type?.toLowerCase().includes(searchText),
+      );
+      setFilterData(data);
+      console.log(data);
+    } else {
+      setFilterData(interactions);
+    }
+  };
   return (
     <div className="bg-base-300 flex-1">
       {" "}
       <div className="container px-4 mx-auto pt-12">
-        <div className="flex items-center justify-between">
+        <div className="flex gap-3 flex-col sm:flex-row items-center justify-between">
           <h1 className="text-2xl lg:text-3xl font-bold">TimeLine</h1>
 
-          <div className="dropdown dropdown-center">
-            <div tabIndex={0} role="button" className="btn m-1">
-              {selected}
+          <div className="flex  w-full justify-center sm:justify-end items-center gap-4">
+            <input
+              type="text"
+              onChange={handleSearch}
+              placeholder="Search here"
+              className="input focus:border-none"
+            />
+            <div className="dropdown dropdown-center">
+              <div tabIndex={0} role="button" className="btn m-1">
+                {selected}
+              </div>
+
+              <ul
+                tabIndex="-1"
+                className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+              >
+                <li>
+                  <button onClick={() => handleFilter("Call")}>Call</button>
+                </li>
+                <li>
+                  <button onClick={() => handleFilter("Text")}>Text</button>
+                </li>
+                <li>
+                  <button onClick={() => handleFilter("Video")}>Video</button>
+                </li>
+                <li>
+                  <button onClick={() => handleFilter("All")}>All</button>
+                </li>
+              </ul>
             </div>
-            <ul
-              tabIndex="-1"
-              className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-            >
-              <li>
-                <button onClick={() => handleFilter("Call")}>Call</button>
-              </li>
-              <li>
-                <button onClick={() => handleFilter("Text")}>Text</button>
-              </li>
-              <li>
-                <button onClick={() => handleFilter("Video")}>Video</button>
-              </li>
-              <li>
-                <button onClick={() => handleFilter("All")}>All</button>
-              </li>
-            </ul>
           </div>
         </div>
         <div className="my-4">
