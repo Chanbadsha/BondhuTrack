@@ -4,6 +4,7 @@ import Footer from "./components/shared/Footer";
 import NavBar from "./components/shared/NavBar";
 import FriendsProvider from "./lib/Context/FriendsProvider";
 import InterActionProvider from "./lib/Context/InterActionProvider";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,10 @@ export default function RootLayout({ children }) {
           <FriendsProvider>
             <div className="fixed z-10 top-0 left-0 w-full">
               <NavBar></NavBar>
+              <Toaster
+                position="top-center"
+                toastOptions={{ style: { textAlign: "center" } }}
+              />
             </div>
             <main className="flex-1 mt-17 flex flex-col"> {children}</main>
             <Footer />

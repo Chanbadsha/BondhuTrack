@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { InterActionContext } from "../lib/Context/InterActionProvider";
 import { FaVideo } from "react-icons/fa";
 import { MdMessage, MdWifiCalling3 } from "react-icons/md";
+import toast from "react-hot-toast";
 
 const TimelinePage = () => {
   const [mounted, setMounted] = useState(false);
@@ -25,6 +26,8 @@ const TimelinePage = () => {
       const data = interactions.filter((filter) => filter.type == filterBy);
       setFilterData(data);
     }
+
+    toast.success(`Showing ${filterBy} interactions`);
   };
   return (
     <div className="bg-base-300 flex-1">

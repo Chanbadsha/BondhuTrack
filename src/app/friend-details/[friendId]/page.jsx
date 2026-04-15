@@ -1,16 +1,13 @@
 import CheckIn from "@/app/components/shared/CheckIn";
+import FriendInfoBtn from "@/app/components/shared/FriendInfoBtn";
 import InteractionsCard from "@/app/components/shared/InteractionsCard";
 import GetFriendsData from "@/app/lib/GetFriendsData";
 import Image from "next/image";
+import toast from "react-hot-toast";
 
 import { FaArchive, FaVideo } from "react-icons/fa";
 import { LuHistory } from "react-icons/lu";
-import {
-  MdDeleteForever,
-  MdMessage,
-  MdNotificationsPaused,
-  MdWifiCalling3,
-} from "react-icons/md";
+import { MdDeleteForever, MdNotificationsPaused } from "react-icons/md";
 
 const FriendDetailsPage = async ({ params }) => {
   const { friendId } = await params;
@@ -33,6 +30,12 @@ const FriendDetailsPage = async ({ params }) => {
     day: "numeric",
     year: "numeric",
   });
+
+  const defaultClick = () => {
+    toast("This feature will be available soon. Stay tuned!", {
+      icon: "ℹ️",
+    });
+  };
 
   return (
     <div className="bg-base-300 pb-12  px-0">
@@ -75,24 +78,7 @@ const FriendDetailsPage = async ({ params }) => {
             </div>
           </div>
           {/* Friend Info btn */}
-          <div className="bg-white py-8  mt-6  rounded-2xl shadow-sm hover:shadow-md transition p-6  border border-gray-100">
-            <h2 className="text-xl  flex items-center gap-1 justify-center font-bold text-[#0F172A]">
-              <MdNotificationsPaused />
-              Snooze 2 weeks
-            </h2>
-          </div>
-          <div className="bg-white py-8  mt-2  rounded-2xl shadow-sm hover:shadow-md transition p-6  border border-gray-100">
-            <h2 className="text-xl  flex items-center gap-1 justify-center font-bold text-[#0F172A]">
-              <FaArchive />
-              Archive
-            </h2>
-          </div>
-          <div className="bg-white py-8  mt-2  rounded-2xl shadow-sm hover:shadow-md transition p-6  border border-gray-100">
-            <h2 className="text-xl text-red-500  flex items-center gap-1 justify-center font-bold ">
-              <MdDeleteForever />
-              Delete
-            </h2>
-          </div>
+          <FriendInfoBtn />
         </div>
         {/* Friend Details Section */}
         <div className="  sm:col-span-5  xl:col-span-6 px-4 xl:px-12">

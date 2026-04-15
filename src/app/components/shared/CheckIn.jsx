@@ -2,6 +2,7 @@
 import { InterActionContext } from "@/app/lib/Context/InterActionProvider";
 import SaveData from "@/app/lib/localStorage/SaveData";
 import { useContext } from "react";
+import toast from "react-hot-toast";
 import { FaVideo } from "react-icons/fa";
 import { MdMessage, MdWifiCalling3 } from "react-icons/md";
 
@@ -50,6 +51,11 @@ const CheckIn = ({ friendInfo }) => {
     };
     setInteractions([...interactions, newInteraction]);
     SaveData("RecentInteractions", interactions);
+    action == "Call"
+      ? toast.success(`📞 Call logged with ${friendInfo.name}`)
+      : action == "Video"
+        ? toast.success(`🎥 Video check-in with ${friendInfo.name}`)
+        : toast.success(`💬 Message sent to ${friendInfo.name}`);
   };
   return (
     <div className="bg-white py-8  mt-12  rounded-2xl shadow-sm hover:shadow-md transition p-6  border border-gray-100">
