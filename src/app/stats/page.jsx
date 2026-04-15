@@ -31,7 +31,7 @@ const StatsPage = () => {
   };
 
   return (
-    <div className="bg-base-300 flex flex-col flex-1">
+    <div className="bg-base-300 pt-6 xl:pt-8 pb-4 flex flex-col flex-1">
       <div className="container max-w-7xl px-4 mx-auto mb-12 pt-12">
         <h1 className="text-2xl lg:text-3xl xl:text-5xl font-bold">
           Friendship Analytics

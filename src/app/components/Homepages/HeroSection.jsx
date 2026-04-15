@@ -59,7 +59,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 pt-4 lg:pt-8">
       <div className=" container mx-auto border-b pb-12 border-b-gray-400">
         <div className="max-w-4xl mx-auto text-center pt-6  lg:pt-12 xl:pt-16">
           <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold capitalize">

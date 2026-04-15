@@ -46,7 +46,7 @@ const TimelinePage = () => {
     }
   };
   return (
-    <div className="bg-base-300 flex-1">
+    <div className="bg-base-300 pb-12 pt-4 flex-1">
       {" "}
       <div className="container px-4 mx-auto pt-12">
         <div className="flex gap-3 flex-col sm:flex-row items-center justify-between">

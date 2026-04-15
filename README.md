@@ -19,7 +19,7 @@ This project is built with a focus on **simplicity, usability, and real-life use
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 ### 1. Friend Management System
 
