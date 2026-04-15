@@ -5,6 +5,7 @@ import NavBar from "./components/shared/NavBar";
 import FriendsProvider from "./lib/Context/FriendsProvider";
 import InterActionProvider from "./lib/Context/InterActionProvider";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
                 position="top-center"
                 toastOptions={{ style: { textAlign: "center" } }}
               />
+              <Analytics />
             </div>
             <main className="flex-1 mt-17 flex flex-col"> {children}</main>
             <Footer />
