@@ -61,18 +61,24 @@ This project is built with a focus on **simplicity, usability, and real-life use
 
 ---
 
-# Clone repository
+## ⚙️ Installation & Setup
 
-git clone https://github.com/your-username/bondhutrack.git
+Follow these steps to run the project locally:
 
-# Move into project
+```bash
+# Clone the repository
+git clone https://github.com/Chanbadsha/bondhutrack.git
 
+# Move into the project directory
 cd bondhutrack
 
 # Install dependencies
-
 npm install
 
-# Run development server
-
+# Run the development server
 npm run dev
+
+
+## The app will be available at:
+http://localhost:3000
+```
